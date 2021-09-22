@@ -1,0 +1,45 @@
+@import "../../../../styles.scss";
+
+$colorShared: rgba(31, 41, 55, 1);
+
+.btn-body {
+  background-color: transparent;
+  border: 0ch;
+  color: black;
+  &:hover {
+    border-bottom: 1px solid $colorPrimario;
+    border-radius: 0%;
+    background-color: transparent;
+  }
+  &:active,
+  &:focus {
+    border-bottom: 2px solid $colorPrimario;
+    border-radius: 0%;
+    background-color: transparent;
+  }
+}
+.cardBody {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  background-color: $colorFondo;
+  .colorIconos {
+    margin-bottom: 1rem;
+    font-size: 1.125rem /* 18px */;
+    line-height: 1.75rem /* 28px */;
+    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  }
+  .colorDescripcion {
+    color: white;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem /* 18px */;
+    line-height: 1.75rem /* 28px */;
+    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  }
+  img {
+    max-width: 300px;
+    max-height: auto;
+  }
+}

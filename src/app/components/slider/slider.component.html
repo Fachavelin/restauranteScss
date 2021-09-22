@@ -1,0 +1,16 @@
+<div class="flex justify-center">
+  <ngb-carousel
+    *ngIf="datos.slide_header"
+    [showNavigationArrows]="showNavigationArrows"
+    [showNavigationIndicators]="showNavigationIndicators"
+  >
+    <ng-template ngbSlide *ngFor="let image of datos?.slide_header">
+      <div class="picsum-img-wrapper">
+        <img [src]="image?.img" alt="Random slide" />
+      </div>
+      <div *ngIf="inicio" class="carousel-caption">
+        <a class="btn btn-primary border-2" routerLink="menu">DESCUBRIR</a>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>

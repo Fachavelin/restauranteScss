@@ -1,0 +1,12 @@
+@import "~bootstrap/scss/bootstrap";
+@import "../../../../styles.scss";
+
+.btn-primary {
+  background-color: transparent;
+  border-color: $colorPrimario;
+
+  &:hover {
+    background-color: $colorPrimario;
+    border-color: white;
+  }
+}
