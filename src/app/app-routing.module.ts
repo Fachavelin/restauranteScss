@@ -11,18 +11,22 @@ const routes: Routes = [
     path: '',
     component: InicioComponent,
     pathMatch: 'full',
+    data: { animation: 'inicio' },
   },
   {
     path: 'menu',
     component: MenuComponent,
+    data: { animation: 'menu' },
   },
   {
     path: 'galeria',
     component: GaleriaComponent,
+    data: { animation: 'galeria' },
   },
   {
     path: 'contacto',
     component: ContactoComponent,
+    data: { animation: 'contacto' },
   },
   {
     path: '**',

@@ -10,12 +10,21 @@ $colorShared: rgba(31, 41, 55, 1);
     border-bottom: 1px solid $colorPrimario;
     border-radius: 0%;
     background-color: transparent;
+    cursor: pointer;
   }
   &:active,
   &:focus {
     border-bottom: 2px solid $colorPrimario;
     border-radius: 0%;
     background-color: transparent;
+  }
+}
+.btn-body-activo {
+  border-bottom: 2px solid $colorPrimario;
+  border-radius: 0%;
+  background-color: transparent;
+  &:hover {
+    cursor: pointer;
   }
 }
 .cardBody {

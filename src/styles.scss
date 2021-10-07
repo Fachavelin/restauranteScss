@@ -11,8 +11,20 @@
 
 @import "animate.css";
 
+/* @import "~mapbox-gl/dist/mapbox-gl.css";
+@import "~@mapbox/mapbox-gl-geocoder/lib/mapbox-gl-geocoder.css"; */
+
 $colorFondo: #000000;
 $colorPrimario: #fbc656;
+$colorShared: rgba(31, 41, 55, 1);
+
+/* $colorFondo: white;
+$colorPrimario: #1da840;
+$colorShared: rgb(207, 95, 95); */
+
+main {
+  position: relative;
+}
 
 .colorTextoPrimario {
   color: white;
@@ -24,7 +36,7 @@ $colorPrimario: #fbc656;
   background-color: $colorFondo;
 }
 .colorShared {
-  @apply bg-gray-800 #{!important};
+  background-color: $colorShared;
 }
 .colorFacebook {
   color: #3c5a99;
@@ -48,4 +60,10 @@ $colorPrimario: #fbc656;
 }
 .hr {
   border-top: 1px solid $colorPrimario;
+}
+agm-map {
+  height: 300px;
+}
+html {
+  @apply bg-black #{!important};
 }

@@ -3,10 +3,21 @@
 
 .btn-primary {
   background-color: transparent;
-  border-color: $colorPrimario;
+  border-color: $colorPrimario !important;
 
-  &:hover {
-    background-color: $colorPrimario;
+  &:enabled,
+  &:visited,
+  &:hover,
+  &:focus,
+  &:active,
+  &:after {
+    background-color: $colorPrimario !important;
     border-color: white;
   }
+}
+.slider {
+  min-height: 300px;
+}
+.carousel {
+  max-height: 384px;
 }

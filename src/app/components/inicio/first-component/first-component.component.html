@@ -1,35 +1,37 @@
 <!-- <div class="hr"></div> -->
-<div class="mt-8 flex justify-center">
-  <p class="colorIconos text-center font-serif text-4xl max-w-xs">
-    {{ titulo1 }}
-  </p>
-</div>
-<div class="my-8 flex justify-center">
-  <p class="colorIconos font-serif text-center max-w-md text-xl">
-    {{ titulo2 }}
-  </p>
-</div>
-<div class="flex justify-center">
-  <div
-    class="
-      colorShared
-      max-w-6xl
-      w-full
-      grid-flow-row
-      sm:flex sm:justify-between
-    "
-  >
-    <div class="flex justify-center">
-      <img [src]="datos?.section_1?.menu_photo" alt="" />
-    </div>
-    <div class="">
+<div class="min-height">
+  <div class="mt-8 flex justify-center">
+    <p class="colorIconos text-center font-serif text-4xl max-w-xs">
+      {{ titulo1 }}
+    </p>
+  </div>
+  <div class="my-8 flex justify-center">
+    <p class="colorIconos font-serif text-center max-w-md text-xl">
+      {{ titulo2 }}
+    </p>
+  </div>
+  <div class="flex justify-center">
+    <div
+      class="
+        colorShared
+        max-w-5xl
+        w-full
+        grid-flow-row
+        sm:flex sm:justify-between
+      "
+    >
       <div class="flex justify-center">
-        <img class="w-4/5 mt-4" [src]="datos?.section_1?.menu_text" alt="" />
+        <img [src]="datos?.section_1?.menu_photo" alt="" />
       </div>
-      <div class="mb-8 mt-8 sm:mb-0 sm:mt-10 md:mt-14 flex justify-center">
-        <a class="btn btn-primary border-2" routerLink="menu">DESCUBRIR</a>
+      <div class="">
+        <div class="flex justify-center">
+          <img class="w-4/5 mt-4" [src]="datos?.section_1?.menu_text" alt="" />
+        </div>
+        <div class="mb-8 mt-8 sm:mb-0 sm:mt-10 md:mt-14 flex justify-center">
+          <a class="btn btn-primary border-2" routerLink="menu">DESCUBRIR</a>
+        </div>
       </div>
     </div>
   </div>
+  <div class="mt-7 hr"></div>
 </div>
-<div class="mt-7 hr"></div>

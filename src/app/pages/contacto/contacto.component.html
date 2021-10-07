@@ -1,1 +1,94 @@
-<p>contacto works!</p>
+<div class="max-w-7xl mx-auto colorFondo pt-7">
+  <div class="max-w-3xl mx-auto colorForm rounded">
+    <div class="flex justify-center">
+      <label class="formHeader text-xl">Contactanos</label>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2">
+      <div class="md:mt-10">
+        <div class="flex justify-center">
+          <img class="h-20 w-auto" [src]="datos?.footer?.logo_footer" alt="" />
+        </div>
+        <div class="flex justify-center">
+          <nav class="grid">
+            <div class="justify-items-center">
+              <i class="colorIconos fas fa-map-marker-alt"></i>
+              <a class="datosFooter">{{
+                datos?.footer?.contacto?.direccion
+              }}</a>
+            </div>
+            <div class="justify-items-center">
+              <i class="colorIconos fas fa-phone-square"></i>
+              <a class="datosFooter">{{ datos?.footer?.contacto?.telefono }}</a>
+            </div>
+
+            <div class="justify-items-center">
+              <i class="colorIconos far fa-envelope"></i>
+              <a class="datosFooter">{{ datos?.footer?.contacto?.mail }}</a>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="grid mt-4 md:mt-1 mb">
+        <div class="flex justify-center">
+          <input
+            type="text"
+            placeholder="Nombres"
+            class="mb-2 py-2 w-72 input"
+          />
+        </div>
+        <div class="flex justify-center">
+          <input type="text" placeholder="Email" class="mb-2 py-2 w-72 input" />
+        </div>
+        <div class="flex justify-center">
+          <input
+            type="text"
+            placeholder="Números"
+            class="mb-2 py-2 w-72 input"
+          />
+        </div>
+        <div class="flex justify-center">
+          <textarea
+            type="text"
+            placeholder="Mensaje"
+            class="mb-2 py-2 w-72 h-40 input"
+            cols="7"
+          ></textarea>
+        </div>
+        <div class="flex justify-center">
+          <button class="rounded-md px-2 py-1 w-72 mb-2 text-xl buttonForm">
+            Enviar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-xl mx-auto mt-8">
+    <div class="flex justify-center">
+      <p class="tituloHorarios text-2xl">Horarios de atención</p>
+    </div>
+    <div class="flex justify-between">
+      <div>
+        <p class="text-white font-medium text-lg">Lunes|Viernes</p>
+        <p class="text-white font-medium text-lg">Sabados|Domingos</p>
+        <p class="text-white font-medium text-lg">Feriados</p>
+      </div>
+      <div>
+        <p class="text-white font-medium text-lg">8:30 a 19:00</p>
+        <p class="text-white font-medium text-lg">9:30 a 20:30</p>
+        <p class="text-white font-medium text-lg">9:30 a 17:30</p>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-3xl mx-auto mt-8">
+    <div>
+      <div class="flex justify-center">
+        <p class="tituloHorarios text-2xl">Encuentranos aquí</p>
+      </div>
+      <div class="mt-4 h-80">
+        <agm-map [latitude]="lat" [longitude]="lng">
+          <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+        </agm-map>
+      </div>
+    </div>
+  </div>
+</div>

@@ -9,13 +9,14 @@ import { Restaurante, TypeMenu } from 'src/app/interfaces/restaurante';
 export class BodyComponent implements OnInit {
   @Input() datos!: Restaurante;
   opcionMenu: number = 0;
+  temp!: number;
   constructor() {}
 
   ngOnInit(): void {}
 
   cargarMenu(opcion: number) {
-    console.log(opcion);
-    console.log(this.datos);
+    /*  setTimeout(() => {
+    }, 8000); */
     this.opcionMenu = opcion;
   }
 }

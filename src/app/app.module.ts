@@ -11,6 +11,8 @@ import { FireBaseService } from './services/fire-base.service';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AgmCoreModule } from '@agm/core';
+/* GoogleMaps */
 
 @NgModule({
   declarations: [AppComponent],

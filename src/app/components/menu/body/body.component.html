@@ -1,20 +1,31 @@
-<div class="colorFondo">
-  <div class="hr"></div>
-  <div class="justify-center">
+<div class="">
+  <div class="justify-center mt-4">
     <div class="max-w-7xl mx-auto">
       <div class="mx-4 flex justify-between">
-        <button class="btn-body" (click)="cargarMenu(0)">
+        <a
+          (click)="cargarMenu(0)"
+          [ngClass]="opcionMenu == 0 ? 'btn-body-activo' : 'btn-body'"
+        >
           <p class="colorIconos font-serif text-lg">Entradas</p>
-        </button>
-        <button class="btn-body" (click)="cargarMenu(1)">
+        </a>
+        <a
+          (click)="cargarMenu(1)"
+          [ngClass]="opcionMenu == 1 ? 'btn-body-activo' : 'btn-body'"
+        >
           <p class="colorIconos font-serif text-lg">Platos Fuertes</p>
-        </button>
-        <button class="btn-body" (click)="cargarMenu(2)">
+        </a>
+        <a
+          (click)="cargarMenu(2)"
+          [ngClass]="opcionMenu == 2 ? 'btn-body-activo' : 'btn-body'"
+        >
           <p class="colorIconos font-serif text-lg">Postres</p>
-        </button>
-        <button class="btn-body" (click)="cargarMenu(3)">
+        </a>
+        <a
+          (click)="cargarMenu(3)"
+          [ngClass]="opcionMenu == 3 ? 'btn-body-activo' : 'btn-body'"
+        >
           <p class="colorIconos font-serif text-lg">Bebidas</p>
-        </button>
+        </a>
       </div>
     </div>
   </div>
@@ -26,7 +37,7 @@
       <!--*ngIf="opcionMenu == 1"  -->
       <div
         *ngFor="let item of datos.section_2.type_menu[opcionMenu].menu"
-        class="cardBody"
+        class="cardBody animate__animated animate__zoomIn"
       >
         <div class="colorIconos mt-4">
           {{ item.title }}

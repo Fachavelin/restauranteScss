@@ -1,9 +1,10 @@
 <div class="hr"></div>
 <div
   class="
+    footer
     w-full
     text-gray-700
-    bg-gray-800
+    colorShared
     dark-mode:text-gray-200 dark-mode:bg-gray-800
   "
 >
@@ -30,7 +31,7 @@
     <!--  <div class="px-20 sm:bg-black sm:px-32 md:bg-white md:px-0"> -->
 
     <div class="grid md:mt-10">
-      <nav class="flex justify-center pb-4 md:flex md:justify-end md:flex-row">
+      <nav class="flex justify-center">
         <div class="grid justify-items-center">
           <i class="colorIconos fas fa-map-marker-alt"></i>
           <a class="datosFooter">{{ datos?.footer?.contacto?.direccion }}</a>
@@ -39,11 +40,20 @@
           <i class="colorIconos fas fa-phone-square"></i>
           <a class="datosFooter">{{ datos?.footer?.contacto?.telefono }}</a>
         </div>
+        <div class="hidden sm:flex">
+          <div class="grid justify-items-center">
+            <i class="colorIconos far fa-envelope"></i>
+            <a class="datosFooter">{{ datos?.footer?.contacto?.mail }}</a>
+          </div>
+        </div>
+      </nav>
+      <div class="sm:hidden">
         <div class="grid justify-items-center">
           <i class="colorIconos far fa-envelope"></i>
           <a class="datosFooter">{{ datos?.footer?.contacto?.mail }}</a>
         </div>
-      </nav>
+      </div>
+
       <div class="flex justify-center pb-0">
         <a
           class="colorFacebookDentro"
@@ -69,7 +79,7 @@
       class="mr-3 sm:mr-6 md:mr-10 lg:mr-14 xl:mr-20 2xl:mr-28 col-span-3 hr"
     ></div>
   </div>
-  <div class="bg-gray-800 text-white flex justify-center">
+  <div class="colorShared text-white flex justify-center">
     <div class="mt-4 mb-4">©2021 Sensais | Desarrollado por Logicel Applab</div>
   </div>
 </div>
