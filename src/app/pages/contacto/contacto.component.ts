@@ -11,13 +11,19 @@ import { environment } from '../../../environments/environment.prod';
 })
 export class ContactoComponent implements OnInit {
   /* map!: Map; */
-  lat = -0.907637660218041;
-  lng = -89.5986557006836;
+  /* lat:number = -0.907637660218041;
+  lng:number = -89.5986557006836; */
+
+  lat!: number;
+  lng!: number;
+
   datos!: Restaurante;
   constructor(private firebase: FireBaseService) {
     this.firebase.cargarDatos().subscribe(
       (datos) => {
         this.datos = datos;
+        this.lat = Number(datos.section_4.map.lat);
+        this.lng = Number(datos.section_4.map.lng);
       },
       (err) => {}
     );

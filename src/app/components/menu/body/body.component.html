@@ -1,8 +1,9 @@
 <div class="">
   <div class="justify-center mt-4">
     <div class="max-w-7xl mx-auto">
-      <div class="mx-4 flex justify-between">
-        <a
+      <div class="grid sm:grid-cols-2 md:flex md:justify-between">
+        <!--flex justify-between  -->
+        <!-- <a
           (click)="cargarMenu(0)"
           [ngClass]="opcionMenu == 0 ? 'btn-body-activo' : 'btn-body'"
         >
@@ -19,30 +20,41 @@
           [ngClass]="opcionMenu == 2 ? 'btn-body-activo' : 'btn-body'"
         >
           <p class="colorIconos font-serif text-lg">Postres</p>
-        </a>
-        <a
+        </a> -->
+        <!--  <a
           (click)="cargarMenu(3)"
           [ngClass]="opcionMenu == 3 ? 'btn-body-activo' : 'btn-body'"
         >
           <p class="colorIconos font-serif text-lg">Bebidas</p>
+        </a> -->
+        <a
+          class="mx-11 mt-3 md:mx-0 md:mt-0 md:px-2"
+          *ngFor="let item of datos?.section_2?.type_menu; let i = index"
+          (click)="cargarMenu(i)"
+          [ngClass]="opcionMenu == 3 ? 'btn-body-activo' : 'btn-body'"
+        >
+          <p class="colorIconos font-serif text-lg text-center">
+            {{ item.type }}
+          </p>
         </a>
       </div>
     </div>
   </div>
   <div class="flex justify-center">
     <div
+      *ngIf="datos"
       [ngSwitch]="opcionMenu"
       class="place-items-center grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3"
     >
       <!--*ngIf="opcionMenu == 1"  -->
       <div
         *ngFor="let item of datos.section_2.type_menu[opcionMenu].menu"
-        class="cardBody animate__animated animate__zoomIn"
+        class="cardBody animate__animated animate__flipInY"
       >
         <div class="colorIconos mt-4">
           {{ item.title }}
         </div>
-        <img src="{{ item.img }}" alt="" class="" />
+        <img src="{{ item?.img }}" alt="" class="" />
         <div class="colorDescripcion">
           {{ item.description }}
         </div>
