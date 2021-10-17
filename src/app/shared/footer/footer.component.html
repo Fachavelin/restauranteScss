@@ -23,47 +23,53 @@
       class="p-4 flex flex-row items-center justify-center md:justify-between"
     >
       <img
-        class="h-20 sm:h-24 md:h-28 w-auto"
+        class="h-20 sm:h-24 md:h-28 lg:h-32 w-auto"
         [src]="datos?.footer?.logo_footer"
         alt=""
-      />
+      /><!-- md:h-28 -->
     </div>
     <!--  <div class="px-20 sm:bg-black sm:px-32 md:bg-white md:px-0"> -->
 
     <div class="grid md:mt-10">
       <nav class="flex justify-center">
         <div class="grid justify-items-center">
-          <i class="colorIconos fas fa-map-marker-alt"></i>
+          <i class="colorIconos fas fa-map-marker-alt fa-2x"></i>
           <a class="datosFooter">{{ datos?.footer?.contacto?.direccion }}</a>
         </div>
         <div class="grid justify-items-center">
-          <i class="colorIconos fas fa-phone-square"></i>
+          <i class="colorIconos fas fa-phone-square fa-2x"></i>
           <a class="datosFooter">{{ datos?.footer?.contacto?.telefono }}</a>
         </div>
         <div class="hidden sm:flex">
           <div class="grid justify-items-center">
-            <i class="colorIconos far fa-envelope"></i>
+            <i class="colorIconos far fa-envelope fa-2x"></i>
             <a class="datosFooter">{{ datos?.footer?.contacto?.mail }}</a>
           </div>
         </div>
       </nav>
       <div class="sm:hidden">
         <div class="grid justify-items-center">
-          <i class="colorIconos far fa-envelope"></i>
+          <i class="colorIconos far fa-envelope fa-2x"></i>
           <a class="datosFooter">{{ datos?.footer?.contacto?.mail }}</a>
         </div>
       </div>
 
-      <div class="flex justify-center pb-0">
+      <div class="flex justify-between mx-40">
+        <!-- flex justify-around pb-0 -->
         <a
+          *ngIf="datos?.footer?.redes?.facebook"
           class="colorFacebookDentro"
           href="{{ datos?.footer?.redes?.facebook }} "
           target="_blank"
         >
           <i class="colorFacebook px-4 pb-6 fab fa-facebook-square"></i>
         </a>
-        <a href="{{ datos?.footer?.redes?.instagram }} " target="_blank">
-          <i class="colorInstagram px-4 pb-6 fab fa-instagram"></i>
+        <a
+          *ngIf="datos?.footer?.redes?.instagram"
+          href="{{ datos?.footer?.redes?.instagram }} "
+          target="_blank"
+        >
+          <i class="colorInstagram fab fa-instagram"></i>
         </a>
       </div>
     </div>
@@ -80,6 +86,8 @@
     ></div>
   </div>
   <div class="colorShared text-white flex justify-center">
-    <div class="mt-4 mb-4">©2021 Sensais | Desarrollado por Logicel Applab</div>
+    <div class="mt-4 mb-4 text-xs">
+      ©2021 Sensais | Desarrollado por Logicel Applab
+    </div>
   </div>
 </div>

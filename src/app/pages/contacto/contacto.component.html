@@ -6,22 +6,22 @@
     <div class="grid grid-cols-1 md:grid-cols-2">
       <div class="md:mt-10">
         <div class="flex justify-center">
-          <img class="h-20 w-auto" [src]="datos?.footer?.logo_footer" alt="" />
+          <img class="h-24 w-auto" [src]="datos?.footer?.logo_footer" alt="" />
         </div>
-        <div class="flex justify-center">
+        <div class="flex justify-center mt-3">
           <nav class="grid">
-            <div class="justify-items-center">
+            <div class="justify-items-center mt-3">
               <i class="colorIconos fas fa-map-marker-alt"></i>
               <a class="datosFooter">{{
                 datos?.footer?.contacto?.direccion
               }}</a>
             </div>
-            <div class="justify-items-center">
+            <div class="justify-items-center mt-3">
               <i class="colorIconos fas fa-phone-square"></i>
               <a class="datosFooter">{{ datos?.footer?.contacto?.telefono }}</a>
             </div>
 
-            <div class="justify-items-center">
+            <div class="justify-items-center mt-3">
               <i class="colorIconos far fa-envelope"></i>
               <a class="datosFooter">{{ datos?.footer?.contacto?.mail }}</a>
             </div>

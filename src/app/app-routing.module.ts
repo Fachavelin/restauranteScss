@@ -10,7 +10,7 @@ const routes: Routes = [
   {
     path: '',
     component: InicioComponent,
-    pathMatch: 'full',
+    pathMatch: 'prefix',
     data: { animation: 'inicio' },
   },
   {

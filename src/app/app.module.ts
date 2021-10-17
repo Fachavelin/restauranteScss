@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AgmCoreModule } from '@agm/core';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 /* GoogleMaps */
 
 @NgModule({
@@ -28,7 +29,10 @@ import { AgmCoreModule } from '@agm/core';
     BrowserAnimationsModule,
     BrowserModule,
   ],
-  providers: [FireBaseService],
+  providers: [
+    FireBaseService,
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
