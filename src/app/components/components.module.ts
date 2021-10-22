@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { MaterialModule } from '../material/material.module';
 import { BodyComponent } from './menu/body/body.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { BodyComponent } from './menu/body/body.component';
     BrowserAnimationsModule,
     BrowserModule,
     MaterialModule,
+    RouterModule,
   ],
   exports: [
     SliderComponent,

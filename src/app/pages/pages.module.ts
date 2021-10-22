@@ -11,6 +11,7 @@ import { NgxGlideModule } from 'ngx-glide';
 /* import { NgxMapboxGLModule } from 'ngx-mapbox-gl'; */
 import { environment } from '../../environments/environment.prod';
 import { AgmCoreModule } from '@agm/core';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { AgmCoreModule } from '@agm/core';
     ComponentsModule,
     NgbModule,
     NgxGlideModule,
+    RouterModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDtC-_WcdH1KYrRBatZtXe11aSgohrvOpI',
     }),

@@ -1,6 +1,17 @@
 <div class="colorFondo h-11 w-full"></div>
 <div class="bg-black">
   <div class="max-w-7xl mx-auto">
+    <div class="flex justify-center">
+      <p class="colorIconos text-center font-serif text-4xl">Restaurante</p>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3">
+      <div *ngFor="let item of datos?.section_3?.moments" class="mx-2">
+        <img src="{{ item.img }}" alt="" class="rounded-xl my-2" />
+      </div>
+    </div>
+    <div class="flex justify-center">
+      <p class="colorIconos text-center font-serif text-4xl">Momentos</p>
+    </div>
     <div class="grid grid-cols-2 md:grid-cols-3">
       <div *ngFor="let item of datos?.section_3?.restaurant" class="mx-2">
         <img src="{{ item.img }}" alt="" class="rounded-xl my-2" />
