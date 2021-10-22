@@ -32,6 +32,7 @@
 
     <div class="grid md:mt-10">
       <nav class="flex justify-center">
+        <!--  -->
         <div class="grid justify-items-center">
           <i class="colorIconos fas fa-map-marker-alt fa-2x"></i>
           <a class="datosFooter">{{ datos?.footer?.contacto?.direccion }}</a>
@@ -54,7 +55,7 @@
         </div>
       </div>
 
-      <div class="flex justify-between mx-40">
+      <div class="flex justify-center">
         <!-- flex justify-around pb-0 -->
         <a
           *ngIf="datos?.footer?.redes?.facebook"
@@ -62,7 +63,7 @@
           href="{{ datos?.footer?.redes?.facebook }} "
           target="_blank"
         >
-          <i class="colorFacebook px-4 pb-6 fab fa-facebook-square"></i>
+          <i class="colorFacebook mr-4 pb-6 fab fa-facebook-square"></i>
         </a>
         <a
           *ngIf="datos?.footer?.redes?.instagram"
@@ -75,6 +76,7 @@
     </div>
   </div>
   <div class="grid grid-cols-7 flex items-center">
+    <!--  -->
     <div
       class="ml-3 sm:ml-6 md:ml-10 lg:ml-14 xl:ml-20 2xl:ml-28 col-span-3 hr"
     ></div>

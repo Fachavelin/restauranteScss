@@ -31,7 +31,7 @@
           class="mx-11 mt-3 md:mx-0 md:mt-0 md:px-2"
           *ngFor="let item of datos?.section_2?.type_menu; let i = index"
           (click)="cargarMenu(i)"
-          [ngClass]="opcionMenu == 3 ? 'btn-body-activo' : 'btn-body'"
+          [ngClass]="opcionMenu == i ? 'btn-body-activo' : 'btn-body'"
         >
           <p class="colorIconos font-serif text-lg text-center">
             {{ item.type }}
