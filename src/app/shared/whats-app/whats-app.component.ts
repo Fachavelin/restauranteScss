@@ -8,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class WhatsAppComponent implements OnInit {
   link: string =
     'https://api.whatsapp.com/send?phone=593982291894&text=Hola%2C+acabo+de+ver+tu+anuncio+estoy+interesado+en+contactarme+contigo';
+  visible: boolean = false;
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.visible = !this.visible;
+    }, 1500);
+  }
 }

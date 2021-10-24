@@ -1,4 +1,5 @@
 <a
+  *ngIf="visible"
   class="
     colorWhatsApp
     fixed
@@ -11,6 +12,7 @@
     items-center
     rounded-full
     cursor-pointer
+    animate__animated animate__flipInY
   "
   href="{{ link }}"
   target="_blank"
